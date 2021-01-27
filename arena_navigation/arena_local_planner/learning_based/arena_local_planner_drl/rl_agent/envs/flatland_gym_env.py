@@ -81,9 +81,9 @@ class FlatlandEnv(gym.Env):
                     for footprint in body['footprints']:
                         if footprint['type'] == 'circle':
                             self._robot_radius = footprint.setdefault(
-                                'radius', 0.3)*1.035
+                                'radius', 0.3)*1.04
                         if footprint['radius']:
-                            self._robot_radius = footprint['radius']*1.035
+                            self._robot_radius = footprint['radius']*1.04
             # get laser related information
             for plugin in robot_data['plugins']:
                 if plugin['type'] == 'Laser':
